@@ -33,7 +33,7 @@ names:
   - Umdamaged Car
 
 coco yolo format: https://docs.ultralytics.com/datasets/detect/coco8/
-
+```
 path: /content/drive/MyDrive/input/YOLO/source/images
 train: /content/drive/MyDrive/input/YOLO/source/images
 val: /content/drive/MyDrive/input/YOLO/source/images/
@@ -57,3 +57,4 @@ names:
   11: trunk
   12: window
   13: windshield
+```
