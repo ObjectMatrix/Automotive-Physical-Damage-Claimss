@@ -6,7 +6,7 @@ FNOL aims to obtain consistent and accurate data about the claim to guide segmen
 
 - Insurance underwriters currently face the challenge of manually extracting risk-related information from diverse data sources and include both text and images. This underwriting research process is not only time-consuming but also prone to error. Recent advancements in computer vision enable us to identify relevant features in images associated with undesirable risk characteristics. This project seeks to explore the use of computer vision models to inform underwriters of potential risks, increase underwriting efficiency, and improve underwriting decisions. The assignment could include several areas of focus including data annotation and labeling, data engineering, machine learning model training, model evaluation, engineering, and the communication of results with stakeholders.
 
-
+```
 ### Config.YAML
 path: /content/drive/MyDrive/input/YOLO/source/images
 train: /content/drive/MyDrive/input/YOLO/source/images
@@ -31,7 +31,7 @@ names:
   - rear-windshield-damage
   - Damaged Car
   - Umdamaged Car
-
+```
 coco yolo format: https://docs.ultralytics.com/datasets/detect/coco8/
 ```
 path: /content/drive/MyDrive/input/YOLO/source/images
