@@ -31,3 +31,29 @@ names:
   - rear-windshield-damage
   - Damaged Car
   - Umdamaged Car
+
+coco yolo format: https://docs.ultralytics.com/datasets/detect/coco8/
+
+path: /content/drive/MyDrive/input/YOLO/source/images
+train: /content/drive/MyDrive/input/YOLO/source/images
+val: /content/drive/MyDrive/input/YOLO/source/images/
+
+nc: 14
+
+# Classes
+
+names:
+  0: Damaged Car
+  1: Undamaged Car
+  2: bumper
+  3: dent
+  4: door-damage
+  5: door-severe-damage
+  6: headlight
+  7: hood
+  8: mirror
+  9: rear-windshield-damage
+  10: totaled
+  11: trunk
+  12: window
+  13: windshield
