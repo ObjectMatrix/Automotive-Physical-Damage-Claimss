@@ -58,3 +58,7 @@ names:
   12: window
   13: windshield
 ```
+
+### Label Studio
+- installation: `pip install -U label-studio`  
+- unlimit images: `DATA_UPLOAD_MAX_NUMBER_FILES=1000000000 label-studio`
