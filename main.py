@@ -63,3 +63,6 @@ async def detect_objects(file: UploadFile = File(...)):
         print(f"Error processing the image: {str(e)}")
         # Return a generic server error response
         return JSONResponse(status_code=500, content={"message": "Internal server error while processing the image."})
+
+
+#cli:>_   `uvicorn main:app --reload`
