@@ -1,4 +1,4 @@
-# A fundamental algorithm in Machine Learning: Gradient Descent  
+# Gradient Descent: A fundamental algorithm in Machine Learning  
 
 Gradient descent is a mathematical optimization technique used in machine learning and many other computational fields. To understand it, it's essential to know what a function's gradient is.
 In multi-dimensional space, a function can have multiple inputs, and the rate at which it changes concerning each input can be different. The gradient of a function is a vector that consists of all its partial derivatives. Each partial derivative represents how much the function's output changes as one particular input changes, while all other inputs are held constant.
