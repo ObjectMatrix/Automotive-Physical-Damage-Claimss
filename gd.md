@@ -99,3 +99,16 @@ The equation $`[ x^5 + x = y ]`$ may have multiple real roots and complex roots,
 If we're looking for an analytical approach for specific values of y, we can use numerical methods to approximate the solutions. Would you like to see how numerical methods can be used to approximate a solution for a given value of y?
 
 In Machine Learning (ML), we often deal with problems that don't have neat, closed-form solutions. The functions we're trying to optimize can be highly complex and not easily solvable with algebraic formulas. Instead, we use iterative algorithms, like gradient descent, that gradually improve the solution by taking steps toward lower error rates based on the data.  ML algorithms provide a practical approach to finding solutions in a landscape too complex for algebraic solutions, making them powerful tools for a wide range of applications.
+
+
+The process of finding a cubic polynomial that approximates the function cos(x)  as closely as possible over the interval 
+[0, π]. This is typically done using methods from numerical analysis, such as polynomial regression or, more commonly for function approximation, the method of least squares.
+
+The polynomial we're seeking has the form   where a, b, c, d are the coefficients that we need to determine. These coefficients will be chosen so that the polynomial closely matches the behavior of the cosine function on the interval from 0 to π.
+
+One common way to determine these coefficients is by using the method of least squares, which involves minimizing the sum of the squares of the differences (errors) between the polynomial's values and the true values of cos(x) at a set of points within the interval. This can be achieved by solving a system of linear equations that comes from setting the partial derivatives of the sum of squared errors with respect to each coefficient to zero.
+
+The result will be a polynomial that doesn't exactly match cos(x)at every point, but will be the best approximation in terms of the least squared error across the interval. The cubic polynomial can then be used as a simpler approximation for calculations that would otherwise require the more complex cosine function.
+
+
+
