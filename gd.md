@@ -9,7 +9,7 @@ Gradient descent navigates the multi-dimensional landscape of a function by foll
 
 
 
-## Given the quadratic equation $`[ x^2 + x = y ]`$ :
+## Given the quadratic equation $`[ x^2 + x = y ]`$ 
 $`[ x^2 + x = y ]`$
 
 We can rewrite it in the standard quadratic form as:
@@ -98,4 +98,4 @@ y. If you're interested in a symbolic approach, you would typically use a comput
 The equation $`[ x^5 + x = y ]`$ may have multiple real roots and complex roots, but without numerical values or further context, we cannot proceed with finding a closed-form solution.
 If we're looking for an analytical approach for specific values of y, we can use numerical methods to approximate the solutions. Would you like to see how numerical methods can be used to approximate a solution for a given value of y?
 
-In machine learning (ML), we often deal with problems that don't have neat, closed-form solutions. The functions we're trying to optimize can be highly complex and not easily solvable with algebraic formulas. Instead, we use iterative algorithms, like gradient descent, that gradually improve the solution by taking steps toward lower error rates based on the data.
+In Machine Learning (ML), we often deal with problems that don't have neat, closed-form solutions. The functions we're trying to optimize can be highly complex and not easily solvable with algebraic formulas. Instead, we use iterative algorithms, like gradient descent, that gradually improve the solution by taking steps toward lower error rates based on the data.  ML algorithms provide a practical approach to finding solutions in a landscape too complex for algebraic solutions, making them powerful tools for a wide range of applications.
