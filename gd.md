@@ -1,4 +1,4 @@
-## A fundamental algorithm in Machine Learning: Gradient Descent  
+# A fundamental algorithm in Machine Learning: Gradient Descent  
 
 Gradient descent is a mathematical optimization technique used in machine learning and many other computational fields. To understand it, it's essential to know what a function's gradient is.
 In multi-dimensional space, a function can have multiple inputs, and the rate at which it changes concerning each input can be different. The gradient of a function is a vector that consists of all its partial derivatives. Each partial derivative represents how much the function's output changes as one particular input changes, while all other inputs are held constant.
@@ -9,7 +9,7 @@ Gradient descent navigates the multi-dimensional landscape of a function by foll
 
 
 
-Given the quadratic equation:
+## Given the quadratic equation $`[ x^2 + x = y ]`$ :
 $`[ x^2 + x = y ]`$
 
 We can rewrite it in the standard quadratic form as:
@@ -26,4 +26,63 @@ Thus, the solutions are:
 $`[ x = \frac{{-1 + \sqrt{{1 + 4y}}}}{2} \quad \text{or} \quad x = \frac{{-1 - \sqrt{{1 + 4y}}}}{2} ]`$
 
 
+## To solve the equation $`[ x^3 + x = y ]`$
+$`[ x^3 + x = y ]`$
+This equation does not lend itself to simple algebraic manipulation for a direct solution due to its cubic nature.
 
+To solve the equation $x^3 + x = y$ for $x$ in terms of $y$, follow these steps:
+
+1. **Recognize the Equation Type**: Notice that this is a cubic equation in $x$.
+
+2. **Rearrange the Equation**: We start with the given equation and aim to isolate $x$. The original equation is
+
+   $$x^3 + x = y$$
+
+3. **Use Cardano's Formula**: For cubic equations of the form $x^3 + px + q = 0$, we can use Cardano's method. However, our equation needs to be in the form of $x^3 + px = -q$ to directly apply the method. Comparing this to our equation, we have $p = 1$ and $q = -y$.
+
+4. **Apply the Transformation**: To solve $x^3 + x + (-y) = 0$, we apply the cubic formula which might involve complex numbers and is generally represented as:
+
+   $$x = \sqrt[3]{\frac{-q}{2} + \sqrt{\left(\frac{q}{2}\right)^2 + \left(\frac{p}{3}\right)^3}} + \sqrt[3]{\frac{-q}{2} - \sqrt{\left(\frac{q}{2}\right)^2 + \left(\frac{p}{3}\right)^3}}$$
+
+   Plugging $p = 1$ and $q = -y$ into the formula gives us a solution in terms of $y$. Due to the complexity of the cubic roots and potential for complex numbers, the exact form of the solution can be quite intricate.
+
+5. **Solving Numerically or Using a CAS**: For specific values of $y$, one would typically use a numerical method or a computer algebra system (CAS) to find the roots of the cubic equation. 
+
+This approach gives a conceptual framework for solving the equation $x^3 + x = y$ for $x$ in terms of $y$. Due to the complexity of the solution for cubic equations, numerical or CAS-based solutions are often employed for specific instances.
+
+ ## To solve the equation $`[ x^4 + x = y ]`$ 
+$`[ x^4 + x = y ]`$ we recognize it as a quartic (fourth-degree) polynomial equation. Solving quartic equations analytically involves complex formulas, but let's outline the conceptual steps for understanding this process
+
+To address the equation $x^4 + x = y$ for $x$ in terms of $y$, we proceed with the following conceptual framework:
+
+1. **Identify the Equation Type**: This is a quartic equation, indicating it's of the fourth degree in terms of $x$.
+
+2. **Equation Rearrangement**: Begin with the provided equation, aiming to isolate $x$. The equation given is
+
+   $$x^4 + x = y$$
+
+3. **Transformation for Solution**: Quartic equations can theoretically be solved using Ferrari's solution, which involves reducing the quartic equation to a cubic one, then solving the cubic equation to eventually solve for $x$. However, our equation directly does not fit the standard form without modification.
+
+4. **Applying Quartic Solution Techniques**: For a quartic equation of the form $x^4 + ax^3 + bx^2 + cx + d = 0$, specific methods like Ferrari's method can be applied. In our case, we simplify to
+
+   $$x^4 + x - y = 0$$
+
+   This simplification sets $a = 0$, $b = 0$, $c = 1$, and $d = -y$.
+
+5. **Numerical or CAS-based Solutions**: Given the complexity of the solutions to quartic equations, which involve nested radicals and potentially complex numbers, exact solutions in terms of radicals might not be straightforward or practical to express for all cases. For specific $y$ values, numerical methods or a computer algebra system (CAS) are typically used to find the roots.
+
+Due to the intricacy of solving quartic equations analytically, especially for general forms like $x^4 + x = y$, employing a CAS for particular instances or numerical approximation techniques becomes a practical necessity. This ensures a solution can be obtained even when an explicit formula in terms of radicals is too complex to be practically useful.
+
+Given the quartic equation:
+
+$$x^4 + x = y$$
+
+The solution for $x$ in terms of $y$ is given by:
+
+$$x = \frac{1}{2} \left( -\sqrt[3]{\sqrt{y} + \sqrt{y - 2 \left( \sqrt[3]{y} - \frac{1}{\sqrt[3]{\sqrt{y}}} \right)}} + \sqrt[3]{\sqrt{y} - \sqrt{y - 2 \left( \sqrt[3]{y} - \frac{1}{\sqrt[3]{\sqrt{y}}} \right)}} \right)$$
+
+where
+
+$$\gamma = \sqrt[3]{\frac{1}{2} + \sqrt{\frac{1}{4} + \frac{(4y)^3}{27}}} + \sqrt[3]{\frac{1}{2} - \sqrt{\frac{1}{4} + \frac{(4y)^3}{27}}}$$
+
+Please note that this solution is derived using advanced algebraic methods and may not cover all possible solutions to the quartic equation.
