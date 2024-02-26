@@ -5,3 +5,25 @@ In multi-dimensional space, a function can have multiple inputs, and the rate at
 Think of the gradient as an arrow pointing in the direction of the steepest incline on the function's landscape. If you were hiking and wanted to ascend as quickly as possible, you'd follow the gradient. However, in optimization, we want to find the lowest point, so we consider the negative of the gradient - this points us in the direction of the steepest descent.
 Gradient descent uses this information to move step-by-step toward the function's lowest point. By iteratively taking small steps opposite the gradient's direction (the steepest ascent), we move toward the function's minimum value. The size of these steps is controlled by the learning rate.
 Gradient descent navigates the multi-dimensional landscape of a function by following the gradient vector, composed of its partial derivatives, to find the function's minimum value efficiently.
+
+
+
+
+Given the quadratic equation:
+$`[ x^2 + x = y ]`$
+
+We can rewrite it in the standard quadratic form as:
+$`[ x^2 + x - y = 0 ]`$
+
+Applying the quadratic formula $`( x = \frac{{-b \pm \sqrt{{b^2 - 4ac}}}}{2a} )`$, where $`( a = 1 ), ( b = 1 ), and ( c = -y ),`$ we get:
+
+$`[ x = \frac{{-1 \pm \sqrt{{1^2 - 4 \cdot 1 \cdot (-y)}}}}{2 \cdot 1} ]`$
+
+$`[ x = \frac{{-1 \pm \sqrt{{1 + 4y}}}}{2} ]`$
+
+Thus, the solutions are:
+
+$`[ x = \frac{{-1 + \sqrt{{1 + 4y}}}}{2} \quad \text{or} \quad x = \frac{{-1 - \sqrt{{1 + 4y}}}}{2} ]`$
+
+
+
