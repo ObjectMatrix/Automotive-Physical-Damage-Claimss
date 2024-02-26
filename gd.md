@@ -100,7 +100,7 @@ If we're looking for an analytical approach for specific values of y, we can use
 
 In Machine Learning (ML), we often deal with problems that don't have neat, closed-form solutions. The functions we're trying to optimize can be highly complex and not easily solvable with algebraic formulas. Instead, we use iterative algorithms, like gradient descent, that gradually improve the solution by taking steps toward lower error rates based on the data.  ML algorithms provide a practical approach to finding solutions in a landscape too complex for algebraic solutions, making them powerful tools for a wide range of applications.
 
-## $`ax^3 + bx^2 + cx + d = cos(x)`$
+## $`ax^3 + bx^2 + cx + d = cos(x)`$ in the interval $`[0,π]`$
 
 The process of finding a cubic polynomial that approximates the function cos(x)  as closely as possible over the interval 
 [0, π]. This is typically done using methods from numerical analysis, such as polynomial regression or, more commonly for function approximation, the method of least squares.
