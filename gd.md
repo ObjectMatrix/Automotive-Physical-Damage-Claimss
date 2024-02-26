@@ -85,4 +85,17 @@ where
 
 $$\gamma = \sqrt[3]{\frac{1}{2} + \sqrt{\frac{1}{4} + \frac{(4y)^3}{27}}} + \sqrt[3]{\frac{1}{2} - \sqrt{\frac{1}{4} + \frac{(4y)^3}{27}}}$$
 
-Please note that this solution is derived using advanced algebraic methods and may not cover all possible solutions to the quartic equation.
+Note that this solution is derived using advanced algebraic methods and may not cover all possible solutions to the quartic equation.
+
+
+
+## Solving the equation $`[ x^5 + x = y ]`$  
+for x in terms of y is much more complex than solving quadratic equations because there is no general formula for polynomials of degree five or higher, due to the Abel-Ruffini theorem, <a href="https://[readme.com](https://en.wikipedia.org/wiki/Abel%E2%80%93Ruffini_theorem)/" target="_blank">Abel-Ruffini </a> . This means that, in general, we can't express the solutions in terms of radicals as we can for quadratics, cubics, and quartics.
+
+However, we can still find solutions numerically or graphically. Numerical methods such as Newton's method can be used to approximate the roots of this equation for specific values of 
+y. If you're interested in a symbolic approach, you would typically use a computer algebra system to manipulate the equation and find solutions.
+
+The equation $`[ x^5 + x = y ]`$ may have multiple real roots and complex roots, but without numerical values or further context, we cannot proceed with finding a closed-form solution.
+If we're looking for an analytical approach for specific values of y, we can use numerical methods to approximate the solutions. Would you like to see how numerical methods can be used to approximate a solution for a given value of y?
+
+In machine learning (ML), we often deal with problems that don't have neat, closed-form solutions. The functions we're trying to optimize can be highly complex and not easily solvable with algebraic formulas. Instead, we use iterative algorithms, like gradient descent, that gradually improve the solution by taking steps toward lower error rates based on the data.
