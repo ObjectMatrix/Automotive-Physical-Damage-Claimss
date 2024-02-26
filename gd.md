@@ -112,5 +112,21 @@ One common way to determine these coefficients is by using the method of least s
 
 The result will be a polynomial that doesn't exactly match cos(x)at every point, but will be the best approximation in terms of the least squared error across the interval. The cubic polynomial can then be used as a simpler approximation for calculations that would otherwise require the more complex cosine function.
 
+In essence, We seek a cubic polynomial approximation (ax^3 + bx^2 + cx + d) to cosine on the interval [0, π].
+Let's say you want to represent the cosine function, which is a bit wavy and complex, with a much simpler formula—a cubic polynomial. This polynomial is a smooth curve described by the equation where a, b, c, and d are specific numbers (coefficients) that determine the shape of the curve. 
+
+Now, why would we want to do this? 
+
+Cosine is a trigonometric function that's fundamental in fields like physics and engineering, but it can be computationally intensive to calculate its values repeatedly. 
+
+A cubic polynomial, on the other hand, is much simpler to work with and can be computed very quickly. 
+
+So, we're on a mission to find the best possible cubic polynomial that behaves as much like the cosine function as possible on the interval from 0 to π (from the beginning to the peak of the cosine wave). 
+
+To find the perfect a, b, c, and d that make our cubic polynomial a doppelgänger for cosine, we use a method that involves a bit of mathematical magic called "least squares approximation". 
+
+This method finds the best fit by ensuring that, on average, the vertical distance between the cosine curve and our cubic polynomial is as small as possible. Imagine you could stretch out a bunch of tiny springs from the polynomial to the cosine curve—least squares find the polynomial that would stretch those springs the least.
+
+Once we have our cleverly crafted polynomial, we can use it to estimate cosine values quickly and efficiently. The beauty of this approach is that our approximation will be incredibly close to the real deal, making it a nifty shortcut for complex calculations.
 
 
