@@ -66,3 +66,7 @@ names:
 ### Label Studio
 - installation: `pip install -U label-studio`  
 - unlimit images: `DATA_UPLOAD_MAX_NUMBER_FILES=1000000000 label-studio`
+
+#### References:
+A guide to convolution arithmatics for deep learning:
+https://arxiv.org/pdf/1603.07285.pdf
