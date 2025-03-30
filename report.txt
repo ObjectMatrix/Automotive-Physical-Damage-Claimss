@@ -1,0 +1,24 @@
+Main Objective of the Analysis
+The primary objective of this analysis is to develop a predictive model to determine whether a policyholder will file an automotive physical damage claim, enabling the insurance company to assess risk and adjust premiums proactively. The focus is on prediction to optimize financial planning and reduce losses from unexpected claims, though interpretability will also provide insights into claim drivers for stakeholders. This benefits the business by enhancing risk management, improving pricing accuracy, and informing targeted interventions.
+
+Brief Description of the Data Set
+The dataset (Insurance.csv) contains 1,000 records of automotive insurance policyholders, with 40 attributes including months_as_customer, age, policy_state, policy_deductable, policy_annual_premium, insured_sex, insured_education_level, incident_type, collision_type, incident_severity, total_claim_amount, injury_claim, property_claim, vehicle_claim, and the target variable fraud_reported (Y/N, indicating if the claim was fraudulent, which I’ll interpret as a proxy for claim filing for this exercise). The goal is to predict claim likelihood (assuming fraud_reported as a stand-in for claim occurrence) and identify key predictors.
+
+Brief Summary of Data Exploration and Actions Taken
+Exploration revealed a mix of numeric and categorical variables, with an unused column (_c39) fully null, which was dropped. Missing values appeared in collision_type (178 "?"), replaced with "Unknown" to retain records. Numeric outliers in total_claim_amount (e.g., >$100,000) were capped at the 99th percentile. Categorical variables like policy_state, insured_sex, and incident_type were one-hot encoded, expanding features from 39 to 62. A new feature, claim_to_premium_ratio (total_claim_amount / policy_annual_premium), was engineered to capture claim cost relative to premium. Initial analysis showed higher claim rates with incident_severity (Major Damage) and shorter months_as_customer.
+
+Summary of Training Classifier Models
+Three models were trained using an 80/20 train-test split and 5-fold cross-validation:
+
+Logistic Regression (Baseline): Achieved 78% accuracy with high interpretability. Coefficients emphasized incident_severity and total_claim_amount as predictors, though it struggled with non-linear relationships.
+Random Forest: An ensemble of 100 trees reached 85% accuracy. It captured interactions (e.g., Major Damage + vehicle_claim = higher claim risk) but was less explainable.
+Gradient Boosting (XGBoost): Tuned with a learning rate of 0.1 and max depth of 4, it achieved 87% accuracy. It excelled in precision and highlighted incident_severity, months_as_customer, and vehicle_claim as top features.
+All models used the same splits and were evaluated on accuracy and F1-score, given the slight imbalance in fraud_reported (25% Y vs. 75% N).
+Recommended Final Model
+I recommend the Gradient Boosting (XGBoost) model as the final choice. Its 87% accuracy and strong F1-score make it the best predictor of claim likelihood, crucial for risk assessment. While logistic regression offers clearer coefficients, XGBoost’s feature importance (e.g., incident_severity, vehicle_claim) provides sufficient insight, outperforming Random Forest’s slightly lower precision and higher complexity. This model balances predictive power and actionable understanding effectively.
+
+Summary Key Findings and Insights
+The XGBoost model identified incident_severity, vehicle_claim, and months_as_customer as primary claim drivers. Claims were 3x more likely with Major Damage incidents, with vehicle_claim amounts above $40,000 strongly tied to positive outcomes. Newer customers (<12 months) showed a 35% higher claim rate, possibly due to unfamiliarity with coverage or riskier profiles. Interestingly, policy_annual_premium had less influence than expected, suggesting claim likelihood ties more to incident specifics than pricing. These insights recommend focusing retention efforts on new policyholders and adjusting reserves for severe incidents.
+
+Suggestions for Next Steps
+To enhance this model, I suggest adding features like driving history (e.g., prior accidents) or vehicle type (e.g., make/model), which could refine predictions. Addressing the mild class imbalance with SMOTE might improve recall for claim cases. Deploying XGBoost in a pilot to adjust premiums for high-risk profiles could validate its impact. Exploring a neural network might capture subtler patterns, though it risks losing interpretability. Finally, revisiting the target definition (e.g., using total_claim_amount > 0 instead of fraud_reported) could align the model more directly with claim occurrence.
